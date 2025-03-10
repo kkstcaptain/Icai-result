@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAI Intermediate Exam Results - January 2025</title>
+    <style>
+        /* Basic Reset and Common Styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+             border-radius: 5px;
+        }
+
+        h1 {
+            color: #800080;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+          /* Styles for the logo and header */
+        .header {
+            display: flex;
+            align-items: center;
+             justify-content: center; /* Center the logo horizontally */
+            padding: 10px 0;
+        }
+
+         #logo {
+            max-width: 100%; /* Ensure the logo doesn't overflow its container */
+            height: auto;    /* Maintain aspect ratio */
+            /* Adjust height as per your logo dimensions */
+            margin-right:15px
+        }
+        .instName{
+          text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        .captcha-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .captcha-image {
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+         .captcha-image img{
+            height: 38px;
+         }
+
+        .captcha-input {
+            flex: 1; /* Take remaining space */
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-clear {
+            background-color: #ccc;
+            color: #333;
+        }
+
+        .btn-submit {
+            background-color: #800080;
+            color: #fff;
+        }
+        .disclaimer {
+            background-color: #d9d2e9; /*  purple background */
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #333;
+            border-radius: 5px;
+        }
+        .disclaimer p{
+           margin-bottom: 4px;
+
+        }
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #800080;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://i.imgur.com/6jrP7Lm.jpeg" alt="ICAI Logo" id="logo">
+            <h1 class = "instName">The Institute of Chartered Accountants of India</h1>
+        </div>
+         <p style = "text-align: center;color:#800080;margin-top: -20px;margin-bottom: 20px;">Examination Results, January 2025</p>
+
+        <h2>Intermediate Examination Results</h2>
+        <p>Enter your 6 Digit Roll Number and Registration No. to check your results</p>
+
+        <form id="resultForm" action="result.html" method="GET">
+            <div class="form-group">
+                <label for="rollNumber">Roll No.</label>
+                <input type="number" id="rollNumber" name="rollNumber" required maxlength="6" minlength="6" oninput="validateNumberInput(this)">
+            </div>
+            <div class="form-group">
+                <label for="registrationNumber">Registration No.</label>
+                <input type="text" id="registrationNumber" name="registrationNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="captcha">Enter the text as shown in the below box</label>
+                <div class="captcha-group">
+                    <div class="captcha-image">
+                        <img src="https://i.imgur.com/x2sHq9g.png" alt="CAPTCHA Image">
+                    </div>
+                    <input type="text" id="captcha" name="captcha" class="captcha-input" required>
+                </div>
+                <small>(For preventing automated submissions)</small>
+            </div>
+            <div class="buttons">
+                <button type="button" class="btn-clear" onclick="clearForm()">CLEAR</button>
+                <button type="submit" class="btn-submit">SUBMIT</button>
+            </div>
+        </form>
+
+         <a href="index.html" class="home-link">Home</a>
+
+        <div class="disclaimer">
+         <p style = "text-align: center;font-weight: bold;">Hosted by National Informatics Centre</p>
+         <hr>
+            <p><strong>Disclaimer:</strong>The result given is correct at the time of release of the result by the Institute which accepts no responsibility thereafter for errors or omissions caused as a result of their transmission via the Internet or their downloading or printing by the user. No material from this web site can be copied, reproduced, published, uploaded, posted, transmitted or distributed or dealt with in any manner, unless expressly authorized. Users are not permitted to change, modify or prepare derivative works from the content of this site. For any clarifications / confirmation please address your enquiries to Joint Secretary (Examinations),The Institute of Chartered Accountants of India, 'ICAI BHAWAN', Post Box No. 7112, Indraprastha Marg, New Delhi - 110 002</p>
+        </div>
+    </div>
+
+    <script>
+        function clearForm() {
+            document.getElementById("resultForm").reset();
+        }
+
+         function validateNumberInput(input) {
+          // Remove any non-numeric characters
+            input.value = input.value.replace(/[^0-9]/g, '');
+
+            // Limit to 6 digits
+            if (input.value.length > 6) {
+                input.value = input.value.slice(0, 6);
+            }
+        }
+
+        //Preventing form submission and redirect
+         document.getElementById('resultForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the values from the form
+            var rollNumber = document.getElementById('rollNumber').value;
+            var registrationNumber = document.getElementById('registrationNumber').value;
+            var captchaInput = document.getElementById('captcha').value;
+
+            // Hardcoded correct CAPTCHA value for demonstration
+            var correctCaptcha = 'c4b73w';
+
+           // Validate Roll Number (6 digits)
+            if (rollNumber.length !== 6 || !/^\d+$/.test(rollNumber)) {
+                alert("Please enter a valid 6-digit Roll Number.");
+                return; // Stop the function if validation fails
+            }
+            // Validate the registration number
+            if (!/^CRO\d{7}$/.test(registrationNumber)) {
+                alert("Invalid Registration Number. Please enter in correct format.");
+                return;
+            }
+
+            // Simple CAPTCHA validation (case-insensitive)
+            if (captchaInput.toLowerCase() !== correctCaptcha.toLowerCase()) {
+                alert("Incorrect CAPTCHA. Please try again.");
+                return;
+            }
+
+            // Redirect to the result page with the data
+            // We use query parameters to pass data to the result page
+            window.location.href = `result.html?rollNumber=${rollNumber}&registrationNumber=${registrationNumber}`;
+        });
+    </script>
+</body>
+</html>
