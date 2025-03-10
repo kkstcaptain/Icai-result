@@ -7,28 +7,102 @@
     <style>
         /* Basic Reset and Common Styles */
         body {
-            font-family: sans-serif;
+            font-family: Arial, sans-serif; /* Consistent font */
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: #ffffff; /* White background */
+            color: #000000;  /* Black text*/
         }
 
         .container {
-            width: 80%;
-            margin: 20px auto;
+            width: 90%;  /* Wider container */
+            margin: 10px auto;
             background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-             border-radius: 5px;
+            padding: 10px;
+            box-shadow: none; /* No box-shadow */
+            border-radius: 0;
         }
 
         h1 {
-            color: #800080;
+            color: #7B1FA2;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            font-weight: normal; /* Made the font normal, not bold */
         }
-          /* Styles for the logo and header */
+
+        .form-group {
+            margin-bottom: 10px; /* Reduced margin */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 2px; /* Reduced margin */
+            color: #000000;  /* Black label text */
+            font-size: 0.9em;  /* Smaller font */
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 6px; /* Reduced padding */
+            border: 1px solid #7B1FA2; /* Purple border */
+            border-radius: 0; /* No rounded corners */
+            box-sizing: border-box;
+        }
+
+        .captcha-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .captcha-image {
+            margin-right: 5px; /* Reduced margin */
+            border: 1px solid #7B1FA2; /* Purple border */
+            border-radius: 0;
+        }
+        .captcha-image img{
+            height:38px;
+        }
+
+        .captcha-input {
+            flex: 1;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 15px; /* Reduced margin */
+        }
+
+        button {
+            padding: 8px 16px; /* Adjusted padding */
+            margin: 0 5px; /* Reduced margin */
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            font-size: 0.9em; /* Smaller font */
+        }
+
+        .btn-clear {
+            background-color: #cccccc; /* Light grey */
+            color: #000000;  /* Black text*/
+        }
+
+        .btn-submit {
+            background-color: #7B1FA2;
+            color: #fff;
+        }
+
+        .disclaimer {
+            background-color: #d9d2e9; /*  purple background */
+            padding: 15px;
+            margin-top: 15px; /* Reduced margin */
+            font-size: 0.8em;
+            color: #000000; /* Black text */
+            border-radius: 0;
+        }
+        .disclaimer p{
+            margin-bottom: 4px;
+        }
         .header {
             display: flex;
             align-items: center;
@@ -44,96 +118,38 @@
         }
         .instName{
           text-align: center;
+           font-weight: normal;
         }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-
-        input[type="text"], input[type="number"] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box; /* Include padding and border in element's total width and height */
-        }
-
-        .captcha-group {
-            display: flex;
-            align-items: center;
-        }
-
-        .captcha-image {
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-         .captcha-image img{
-            height: 38px;
-         }
-
-        .captcha-input {
-            flex: 1; /* Take remaining space */
-        }
-
-        .buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .btn-clear {
-            background-color: #ccc;
-            color: #333;
-        }
-
-        .btn-submit {
-            background-color: #800080;
-            color: #fff;
-        }
-        .disclaimer {
-            background-color: #d9d2e9; /*  purple background */
-            padding: 15px;
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #333;
-            border-radius: 5px;
-        }
-        .disclaimer p{
-           margin-bottom: 4px;
-
-        }
-        .home-link {
+         .home-link {
             display: block;
             text-align: center;
             margin-top: 10px;
-            color: #800080;
+            color: #7B1FA2;
             text-decoration: none;
+            font-size: 14px;
+
         }
+          h2{
+             color: #7B1FA2;
+             font-size: 18px;
+             margin-top: 10px;
+             font-weight: normal;
+          }
+          p{
+            text-align: center;
+            font-size: 14px;
+          }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="https://i.imgur.com/6jrP7Lm.jpeg" alt="ICAI Logo" id="logo">
-            <h1 class = "instName">The Institute of Chartered Accountants of India</h1>
+    <div class="header">
+        <img src="https://i.imgur.com/6jrP7Lm.jpeg" alt="ICAI Logo" id = "logo">
+         <h1 class = "instName">The Institute of Chartered Accountants of India</h1>
         </div>
-         <p style = "text-align: center;color:#800080;margin-top: -20px;margin-bottom: 20px;">Examination Results, January 2025</p>
+        <p style="text-align: center; color: #7B1FA2; margin-top: -15px; margin-bottom: 10px; font-size: 1em;">Examination Results, January 2025</p>
+
 
         <h2>Intermediate Examination Results</h2>
         <p>Enter your 6 Digit Roll Number and Registration No. to check your results</p>
@@ -151,7 +167,7 @@
                 <label for="captcha">Enter the text as shown in the below box</label>
                 <div class="captcha-group">
                     <div class="captcha-image">
-                        <img src="https://i.imgur.com/x2sHq9g.png" alt="CAPTCHA Image">
+                         <img src="https://i.imgur.com/x2sHq9g.png" alt="CAPTCHA Image">
                     </div>
                     <input type="text" id="captcha" name="captcha" class="captcha-input" required>
                 </div>
@@ -162,12 +178,11 @@
                 <button type="submit" class="btn-submit">SUBMIT</button>
             </div>
         </form>
-
-         <a href="index.html" class="home-link">Home</a>
+          <a href="index.html" class="home-link">Home</a>
 
         <div class="disclaimer">
-         <p style = "text-align: center;font-weight: bold;">Hosted by National Informatics Centre</p>
-         <hr>
+        <p style = "text-align: center;font-weight: bold;">Hosted by National Informatics Centre</p>
+         <hr style = "color:#957DAD">
             <p><strong>Disclaimer:</strong>The result given is correct at the time of release of the result by the Institute which accepts no responsibility thereafter for errors or omissions caused as a result of their transmission via the Internet or their downloading or printing by the user. No material from this web site can be copied, reproduced, published, uploaded, posted, transmitted or distributed or dealt with in any manner, unless expressly authorized. Users are not permitted to change, modify or prepare derivative works from the content of this site. For any clarifications / confirmation please address your enquiries to Joint Secretary (Examinations),The Institute of Chartered Accountants of India, 'ICAI BHAWAN', Post Box No. 7112, Indraprastha Marg, New Delhi - 110 002</p>
         </div>
     </div>
@@ -176,8 +191,7 @@
         function clearForm() {
             document.getElementById("resultForm").reset();
         }
-
-         function validateNumberInput(input) {
+        function validateNumberInput(input) {
           // Remove any non-numeric characters
             input.value = input.value.replace(/[^0-9]/g, '');
 
@@ -204,7 +218,7 @@
                 alert("Please enter a valid 6-digit Roll Number.");
                 return; // Stop the function if validation fails
             }
-            // Validate the registration number
+              // Validate the registration number
             if (!/^CRO\d{7}$/.test(registrationNumber)) {
                 alert("Invalid Registration Number. Please enter in correct format.");
                 return;
