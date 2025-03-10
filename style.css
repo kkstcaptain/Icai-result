@@ -1,6 +1,6 @@
 /* General body styles */
 body {
-    font-family: 'Arial', sans-serif; /* Use a common sans-serif font */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -9,7 +9,7 @@ body {
 
 /* Header styles */
 .header {
-    background-color: #800080; /* Purple background */
+    background-color: #800080;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -146,3 +146,30 @@ footer {
     }
 }
 
+/* Additional styles for result message */
+.result-message {
+    text-align: right;
+    vertical-align: middle; /* Changed to middle for better vertical alignment */
+    padding-left: 20px;
+    font-weight: bold; /* Added font-weight for emphasis */
+}
+
+/* Added styles for the result table */
+.result-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.result-table th, .result-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.result-table th {
+    background-color: #f0f0f0; /* Added a light gray background to the header */
+}
+
+.result-table .total-row td {
+    font-weight: bold; /* Added font-weight to the total row */
+}
