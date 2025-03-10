@@ -15,7 +15,7 @@
         <section class="results-section">
             <h2>Intermediate Examination Results</h2>
             <div class="result-form">
-                <form>
+                <form action="result-details.html" method="get">
                     <label for="rollNumber">Roll No.:</label>
                     <input type="text" id="rollNumber" name="rollNumber"><br><br>
                     <label for="registrationNumber">Registration No.:</label>
@@ -26,122 +26,15 @@
                         <input type="text" id="captcha" name="captcha">
                     </div><br>
                     <button type="button" class="clear-button">CLEAR</button>
-                    <button type="button" onclick="showResults()">SUBMIT</button>
-                </form>
+                    <button type="submit">SUBMIT</button> </form>
             </div>
-            <div id="results"></div>
         </section>
     </main>
     <footer>
         <p>Hosted by National Informatics Centre</p>
-        <p>Disclaimer: The result displayed here is for informational purposes only. Please refer to the official ICAI website for the final and authentic results.</p>
     </footer>
     <script>
-        // Store the result data
-        const resultData = {
-            "392856": { // Roll number
-                "registrationNumber": "CRO0797366",
-                "name": "KOMAL KUMAR SINGH THAKUR",
-                "group1": {
-                    "subjects": [
-                        {"name": "Advanced Accounting", "marks": "082"},
-                        {"name": "Corporate and Other Laws", "marks": "070"},
-                        {"name": "Taxation", "marks": "073"}
-                    ],
-                    "total": "225",
-                    "result": "SUCCESSFUL"
-                },
-                "group2": {
-                    "subjects": [
-                        {"name": "Cost and Management Accounting", "marks": "089"},
-                        {"name": "Auditing and Ethics", "marks": "076"},
-                        {"name": "Financial Management and Strategic Management", "marks": "094"}
-                    ],
-                    "total": "259",
-                    "result": "SUCCESSFUL"
-                },
-                "grandTotal": "484",
-                "resultMessage": "SUCCESSFUL WITH DISTINCTION"
-            }
-        };
-
-        function showResults() {
-            const rollNumber = document.getElementById("rollNumber").value;
-            const registrationNumber = document.getElementById("registrationNumber").value;
-
-            if (resultData[rollNumber]) {
-                if (resultData[rollNumber].registrationNumber === registrationNumber) {
-                    const resultsDiv = document.getElementById("results");
-                    const result = resultData[rollNumber];
-                    resultsDiv.innerHTML = `
-                        <h3>Intermediate Examination Results, January 2025</h3>
-                        <div class="result-table">
-                            <table>
-                                <tr>
-                                    <td style="width: 150px;">Roll No.</td>
-                                    <td>${rollNumber}</td>
-                                    <td rowspan="2" class="result-message">${result.resultMessage}</td>
-                                </tr>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>${result.name}</td>
-                                </tr>
-                                <tr>
-                                    <th colspan="3">Group I</th>
-                                </tr>
-                                ${result.group1.subjects.map(subject => `
-                                    <tr>
-                                        <td>${subject.name}</td>
-                                        <td>${subject.marks}</td>
-                                    </tr>
-                                `).join('')}
-                                <tr>
-                                    <td>Total</td>
-                                    <td>${result.group1.total}</td>
-                                </tr>
-                                <tr>
-                                    <td>Result</td>
-                                    <td>${result.group1.result}</td>
-                                </tr>
-                                <tr>
-                                    <th colspan="3">Group II</th>
-                                </tr>
-                                ${result.group2.subjects.map(subject => `
-                                    <tr>
-                                        <td>${subject.name}</td>
-                                        <td>${subject.marks}</td>
-                                    </tr>
-                                `).join('')}
-                                <tr>
-                                    <td>Total</td>
-                                    <td>${result.group2.total}</td>
-                                </tr>
-                                <tr>
-                                    <td>Result</td>
-                                    <td>${result.group2.result}</td>
-                                </tr>
-                                <tr>
-                                    <td>Grand Total</td>
-                                    <td>${result.grandTotal}</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <p>'E' indicates marks obtained in an earlier attempt</p>
-                        <p>'<' indicates passed under CA Regulations, 1988</p>
-                        <p>'50E' indicates permanent exemption in paper(s) with the condition of minimum 50% marks in each of the remaining paper(s)</p>
-                        <div class="navigation-links">
-                            <a href="result.html">Check Another Roll Number</a>
-                            <a href="#">Check Merit Login</a>
-                            <a href="index.html">Home</a>
-                        </div>
-                    `;
-                } else {
-                    alert("No result found for this combination.");
-                }
-            } else {
-                alert("No result found for this roll number.");
-            }
-        }
+      //Removed the script from here
     </script>
 </body>
 </html>
