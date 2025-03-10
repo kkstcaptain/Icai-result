@@ -1,111 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ICAI Examination Results</title>
-  <style>
-    /* CSS Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333333;
-      line-height: 1.6;
-    }
-    .header {
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      color: #800080; /* Exact purple as in your design */
-      padding: 20px 0;
-      border-bottom: 2px solid #ccc;
-    }
-    .container {
-      max-width: 960px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-    .section {
-      background-color: #f2f2f2;
-      padding: 20px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
-    .section h3 {
-      font-size: 18px;
-      color: #800080; /* Use the same purple for headings */
-      margin-bottom: 10px;
-    }
-    .section p {
-      font-size: 16px;
-      margin-bottom: 10px;
-      color: #333333;
-    }
-    .section a {
-      display: inline-block;
-      background-color: #0000EE; /* Standard blue link */
-      color: #ffffff;
-      padding: 8px 16px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 16px;
-      border: 1px solid #0000EE;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .section a:hover {
-      background-color: #ffffff;
-      color: #0000EE;
-    }
-    .footer {
-      text-align: center;
-      font-size: 12px;
-      color: #777777;
-      padding: 15px 0;
-      border-top: 1px solid #ccc;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAI Exam Results</title>
+    <style>
+        /* --- General Styles (Consistent Across Pages) --- */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .header h1 {
+            color: #6a2c70;
+            font-size: 1.5rem;
+        }
+
+        h2, h3 {
+            color: #6a2c70;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+         h3{
+            font-size: 1.1rem;
+        }
+
+        /* --- Page 1: Exam List Styles --- */
+        .exam-list {
+            margin-bottom: 30px;
+        }
+
+        .exam-list h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .exam-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exam-list li {
+            margin-bottom: 8px;
+            text-decoration: none; /* Remove underline */
+        }
+          .exam-list li strong{
+              color: black;
+
+          }
+
+        /* --- Footer Styles --- */
+        .footer {
+            background-color: #6a2c70;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.8em;
+        }
+          .footer p{
+              margin-bottom: 0;
+
+          }
+    </style>
 </head>
 <body>
-  <div class="header">
-    The Institute of Chartered Accountants of India<br>
-    Examination Results
-  </div>
-  <div class="container">
-    <div class="section">
-      <h3>CHECK RESULTS</h3>
-      <p>
-        Foundation: January 2025<br>
-        Announced on 04th March 2025
-      </p>
-      <p>
-        Intermediate Examination: January 2025<br>
-        Announced on 04th March 2025
-      </p>
-      <p>
-        Intermediate Examination - UNITS: January 2025<br>
-        Announced on 04th March 2025
-      </p>
-      <a href="result.html">Check Results</a>
+    <div class="container">
+        <div class="header">
+            <img src="icai_logo.png" alt="ICAI Logo"> <h1>The Institute of Chartered Accountants of India</h1>
+            <p style="text-align: center;">Examination Results</p>
+        </div>
+
+        <div class="exam-list">
+            <h3>CHECK RESULTS</h3>
+            <ul>
+                <li><strong>Foundation</strong> : Jan 2025 <br> <span style="color:#6a2c70">Announced on 04th March 2025</span></li>
+                <li><strong>Intermediate Examination</strong> : Jan 2025 <br> <span style="color:#6a2c70">Announced on 04th March 2025</span></li>
+                <li><strong>Intermediate Examination - UNITS</strong> : Jan 2025 <br> <span style="color:#6a2c70">Announced on 04th March 2025</span></li>
+            </ul>
+        </div>
+
+        <div class="exam-list">
+            <h3>CHECK MERIT LIST</h3>
+            <ul>
+                <li><strong>Intermediate Examination</strong> : Jan 2025 <br>Announced on 04th March 2025</li>
+            </ul>
+        </div>
+
+          <div class="footer">
+            <p>Hosted by National Informatics Centre</p>
+            <p>Disclaimer: The result given is correct at the time of release of the result by the Institute which accepts no responsibility thereafter for errors or omissions caused as a result of their transmission via the Internet or their downloading or printing by the user. No material from this web site can be copied, reproduced, published, uploaded, posted, transmitted or distributed or dealt with in any manner, unless expressly authorized. Users are not permitted to change, modify or prepare derivative works from the content of this site. For any clarifications / confirmation please address your enquiries to Joint Secretary (Examinations),The Institute of Chartered Accountants of India, 'ICAI BHAWAN', Post Box No. 7112, Indraprastha Marg, New Delhi - 110 002.</p>
+        </div>
     </div>
-    <div class="section">
-      <h3>CHECK MERIT LIST</h3>
-      <p>
-        Intermediate Examination: January 2025<br>
-        Announced on 04th March 2025
-      </p>
-      <a href="#">Check Merit List</a>
-    </div>
-  </div>
-  <div class="footer">
-    Hosted by National Informatics Centre<br>
-    Disclaimer: The result given is correct at the time of release by the Institute.
-  </div>
 </body>
 </html>
