@@ -3,13 +3,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F7F3E8; /* Updated off-white background color */
+    background-color: #F7F3E8; /* Off-white background color */
     color: #333;
 }
 
 /* Header styles */
 .header {
-    background-color: #800080;
+    background-color: #800080; /* Dark purple */
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -24,68 +24,7 @@ main {
     padding: 20px;
 }
 
-.results-section, .merit-list-section {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-.results-section h2, .merit-list-section h2 {
-    color: #800080;
-}
-
-.results-section ul, .merit-list-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.results-section li a, .merit-list-section li a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-.announced-date {
-    font-size: 0.9em;
-    color: #888;
-}
-
-/* Result form styles */
-.result-form {
-    text-align: center;
-}
-
-.result-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.result-form input[type="text"] {
-    width: 100%;
-    max-width: 300px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.captcha img {
-    display: block;
-    margin: 10px auto;
-    max-width: 200px;
-}
-
-.clear-button, button[type="submit"] {
-    background-color: #800080;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+/* ... (rest of your CSS code) ... */
 
 /* Result table styles */
 #results {
@@ -99,62 +38,29 @@ main {
 }
 
 #results th, #results td {
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* Light gray border */
     padding: 8px;
     text-align: left;
 }
 
 #results th {
-    background-color: #800080;
-    color:white;
+    background-color: #800080; /* Dark purple */
+    color: white;
 }
 
 #results tr:nth-child(odd) {
-    background-color: #E0B0FF;
+    background-color: #e6d1f2; /* Updated light purple */
 }
 
-/* Navigation links styles */
-.navigation-links {
-    margin-top: 20px;
-    text-align: center;
+#results table tr:nth-child(2) td:first-child, /* Name label */
+#results table tr:nth-child(6) td:first-child, /* Result label for Group I */
+#results table tr:nth-child(11) td:first-child { /* Result label for Group II */
+    color: #8b4513; /* Dark reddish-brown color */
 }
 
-.navigation-links a {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 8px 15px;
-    background-color: #800080;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-/* Footer styles */
-footer {
-    background-color: #800080;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: static;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-    .results-section, .merit-list-section {
-        padding: 15px;
-    }
-
-    .result-form input[type="text"] {
-        max-width: 100%;
-    }
-}
-
-/* Additional styles for result message */
-.result-message {
+/* Align numbers to the right */
+#results td:nth-child(2) { /* Second column (marks) */
     text-align: right;
-    vertical-align: middle; /* Changed to middle for better vertical alignment */
-    padding-left: 20px;
-    font-weight: bold; /* Added font-weight for emphasis */
 }
+
+/* ... (rest of your CSS code) ... */
