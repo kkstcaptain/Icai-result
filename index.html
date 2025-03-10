@@ -3,37 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICAI Exam Results</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Intermediate Examination 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <div class="header">
-        <img src="icai-logo.png" alt="ICAI Logo">
-        <h1>The Institute of Chartered Accountants of India</h1>
+    <div class="container">
+        <h1>Intermediate Examination 2025</h1>
+        <form action="result.html" method="GET">
+            <label for="rollNo">Roll Number:</label>
+            <input type="text" id="rollNo" name="rollNo" value="392856" required>
+
+            <label for="regNo">Registration Number:</label>
+            <input type="text" id="regNo" name="regNo" value="CRO0797366" required>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
-    <main>
-        <section class="results-section">
-            <h2>CHECK RESULTS</h2>
-            <ul>
-                <li><a href="result.html">
-                    Intermediate Examination - January 2025 <span class="announced-date">(Announced on 10-03-2025)</span>
-                </a></li>
-            </ul>
-        </section>
-        <section class="merit-list-section">
-            <h2>CHECK MERIT LIST</h2>
-            <ul>
-                <li><a href="#">
-                    Final Examination - MERIT LIST - January 2025 <span class="announced-date">(Announced on 10-03-2025)</span>
-                </a></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>Hosted by National Informatics Centre</p>
-        <div class="disclaimer">
-            <p>Disclaimer: The result displayed here is for informational purposes only. Please refer to the official ICAI website for the final and authentic results.</p>
-        </div>
-    </footer>
 </body>
 </html>
