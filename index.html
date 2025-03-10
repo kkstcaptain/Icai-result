@@ -5,7 +5,7 @@
 <style>
 body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
 .header { background-color: #800080; color: white; padding: 15px 20px; text-align: left; }
-.header img { float: left; margin-right: 15px; height: 50px; } /* Adjust logo height */
+.header img { float: left; margin-right: 15px; height: 50px; }
 .header h1 { margin: 0; font-size: 24px; }
 .header p { margin: 0; font-size: 16px; }
 .container { width: 80%; max-width: 800px; margin: 20px auto; padding: 20px; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
@@ -23,12 +23,30 @@ body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: 
 .captcha-text { font-weight: bold; color: #333; }
 .error-message { color: red; margin-top: 10px; }
 #resultPage { display: none; } /* Initially hide result page */
+
+/* --- ADDED/MODIFIED STYLES FOR EXACT COLOR MATCH --- */
+.result-table { background-color: #E6E0F8; /* Light purple table background */ }
+.result-table tbody tr:nth-child(even) {background-color: #F9F9F9;} /* Optional: if even rows need lighter bg */
+.result-table td { color: #333; /* Default table data text color */ }
+.result-table tbody tr:nth-child(5) td, /* 'Result' row numbers */
+.result-table tbody tr:nth-child(10) td,
+.result-table tbody tr:nth-child(15) td { color: #333; } /* Numbers in Result Row - same as other numbers*/
+.result-table tbody tr:nth-child(5) th, /* 'Result' row text */
+.result-table tbody tr:nth-child(10) th,
+.result-table tbody tr:nth-child(15) th,
+.result-table tbody tr:nth-child(2) td:first-child { /* 'Name' row text */
+    color: #800080; /* Purple color for 'Result' and 'Name' text */
+    font-weight: bold; /* Make 'Result' and 'Name' text bold */
+}
+
+
 </style>
 </head>
 <body>
 
 <div class="header">
-    <img src="placeholder-logo.png" alt="Your Logo">  <h1>ICAI Exam Results</h1>
+    <img src="placeholder-logo.png" alt="Your Logo">
+    <h1>ICAI Exam Results</h1>
     <p>Examination Results</p>
 </div>
 
