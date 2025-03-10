@@ -1,1 +1,148 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif; /* Use a common sans-serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+.header {
+    background-color: #800080; /* Purple background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header img {
+    height: 80px;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+.results-section, .merit-list-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.results-section h2, .merit-list-section h2 {
+    color: #800080;
+}
+
+.results-section ul, .merit-list-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results-section li a, .merit-list-section li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.announced-date {
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Result form styles */
+.result-form {
+    text-align: center;
+}
+
+.result-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.result-form input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.captcha img {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+}
+
+.clear-button, button[type="button"] {
+    background-color: #800080;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Result table styles */
+#results {
+    margin-top: 20px;
+}
+
+#results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#results th, #results td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#results th {
+    background-color: #f5f5f5;
+}
+
+/* Navigation links styles */
+.navigation-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.navigation-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 15px;
+    background-color: #800080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .results-section, .merit-list-section {
+        padding: 15px;
+    }
+
+    .result-form input[type="text"] {
+        max-width: 100%;
+    }
+}
 
