@@ -1,192 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ICAI Intermediate Examination Results</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAI Exam Results</title>
     <style>
+        /* Basic Reset and Common Styles */
         body {
-            font-family: sans-serif;
+            font-family: sans-serif; /* Using a generic sans-serif for now, best to identify the actual font */
             margin: 0;
-        }
-        .header {
-            background-color: #4a148c; /* Dark purple */
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        .header img {
-            float: left;
-            height: 50px;
-            margin-right: 10px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 1.5em;
-            display: inline-block;
-        }
-        .header h2 {
-            font-size:1.2em;
-        }
-        .container {
-            padding: 20px;
-        }
-        .result-heading {
-            color: #4a148c;
-            text-align: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .result-subheading {
-            color: #4a148c;
-            text-align: center;
-            font-size: 1em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .roll-name {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        .roll-name span {
-            font-weight: bold;
-        }
-        .roll-name .name {
-            color: #ffd700; /* Yellowish/gold */
-        }
-        .result-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .result-table td {
-            padding: 5px;
-        }
-        .row-even {
-          background-color:#f8f8fa;
-        }
-        .row-odd{
-          background-color:#e8d7f1;
+            padding: 0;
+            background-color: #f8f8f8; /* Light grey background, adjust as needed */
+            color: #333; /* Dark grey text */
         }
 
-        .result-table .subject {
-            text-align: left;
-            color: white;
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
-        .result-table .marks {
-            text-align: right;
-            color: white;
-        }
-        .result-table .group {
-            font-weight: bold;
-            color: #ffd700;
-        }
-        .result-table .total,
-        .result-table .result-status {
-            font-weight: bold;
-            color: #ffd700;
-        }
-        .notes {
-            font-size: 0.8em;
-            margin-top: 10px;
-            text-align: left;
-        }
-        .footer {
-            background-color: #e0e0e0;
-            padding: 10px;
+
+        h1 {
+            color: #800080; /* Purple color for headings */
             text-align: center;
-            font-size: 0.8em;
+            margin-bottom: 20px;
         }
-        .navigation a {
-            color: #4a148c;
-            text-decoration: none;
-            font-weight: 600;
+
+        h2 {
+            color: #800080;
+            margin-top: 30px;
+            margin-bottom: 10px;
         }
-        .footer p {
-            text-align: justify;
+
+        .result-section, .merit-section {
+            margin-bottom: 20px;
+        }
+
+        .result-item {
+            margin-bottom: 5px;
+        }
+        .result-item a{
+           text-decoration: none;
+           color: black;
+
+        }
+
+        .disclaimer {
+            background-color: #d9d2e9; /*  purple background */
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #333;
+            border-radius: 5px;
+        }
+        .disclaimer p{
+           margin-bottom: 4px;
+
+        }
+          /* Styles for the logo and header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the logo horizontally */
+            padding: 10px 0;
+        }
+
+         #logo {
+            max-width: 100%; /* Ensure the logo doesn't overflow its container */
+            height: auto;    /* Maintain aspect ratio */
+            /* Adjust height as per your logo dimensions */
+            margin-right:15px
+        }
+        .instName{
+          text-align: center;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+           <img src="https://i.imgur.com/6jrP7Lm.jpeg" alt="ICAI Logo" id="logo">
+            <h1 class = "instName">The Institute of Chartered Accountants of India</h1>
+        </div>
+         <p style = "text-align: center;color:#800080;margin-top: -20px;margin-bottom: 20px;">Examination Results</p>
 
-<div class="header">
-    <img src="https://i.imgur.com/your_logo_image.png" alt="ICAI Logo"> <h1>The Institute of Chartered Accountants of India</h1>
-    <h2>Examination Results, January 2025</h2>
-</div>
 
-<div class="container">
-    <div class="result-heading">Intermediate Examination Results, <br>January 2025</div>
-    <div class="result-subheading">Successful With Distinction</div>
-    <div class="roll-name">
-        <span>Roll Number: 392856</span><br>
-        <span class="name">KOMAL KUMAR SINGH THAKUR</span>
+        <h2>CHECK RESULTS</h2>
+        <div class="result-section">
+            <div class="result-item">
+                Foundation : Jan 2025<br>
+                <span style="font-size: smaller;">Announced on 04th March 2025</span>
+            </div>
+            <div class="result-item">
+                <a href="intermediate.html">Intermediate Examination : Jan 2025</a><br>
+                <span style="font-size: smaller;">Announced on 04th March 2025</span>
+            </div>
+            <div class="result-item">
+                Intermediate Examination - UNITS : Jan 2025<br>
+                <span style="font-size: smaller;">Announced on 04th March 2025</span>
+            </div>
+        </div>
+
+        <h2>CHECK MERIT LIST</h2>
+        <div class="merit-section">
+            <div class="result-item">
+                Intermediate Examination : Jan 2025<br>
+                <span style="font-size: smaller;">Announced on 04th March 2025</span>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+         <p style = "text-align: center;font-weight: bold;">Hosted by National Informatics Centre</p>
+         <hr>
+            <p><strong>Disclaimer:</strong>The result given is correct at the time of release of the result by the Institute which accepts no responsibility thereafter for errors or omissions caused as a result of their transmission via the Internet or their downloading or printing by the user. No material from this web site can be copied, reproduced, published, uploaded, posted, transmitted or distributed or dealt with in any manner, unless expressly authorized. Users are not permitted to change, modify or prepare derivative works from the content of this site. For any clarifications / confirmation please address your enquiries to Joint Secretary (Examinations),The Institute of Chartered Accountants of India, 'ICAI BHAWAN', Post Box No. 7112, Indraprastha Marg, New Delhi - 110 002</p>
+        </div>
     </div>
-
-    <table class="result-table">
-        <tr class="row-odd">
-            <td class="group">Group I</td>
-        </tr>
-        <tr class="row-odd">
-            <td class="subject">Advanced Accounting</td>
-            <td class="marks">082</td>
-        </tr>
-        <tr class="row-even">
-            <td class="subject">Corporate and Other Laws</td>
-            <td class="marks">070</td>
-        </tr>
-        <tr class="row-odd">
-            <td class="subject">Taxation</td>
-            <td class="marks">073</td>
-        </tr>
-        <tr  class="row-even">
-            <td class="total">Total</td>
-            <td class="total">225</td>
-        </tr>
-        <tr  class="row-even">
-           <td class="result-status">Result</td>
-            <td class="result-status">SUCCESSFUL</td>
-        </tr>
-        <tr  class="row-odd">
-            <td class="group">Group II</td>
-        </tr>
-        <tr class="row-odd">
-            <td class="subject">Cost and Management Accounting</td>
-            <td class="marks">089</td>
-        </tr>
-        <tr class="row-even">
-            <td class="subject">Auditing and Ethics</td>  <td class="marks">076</td>
-        </tr>
-        <tr class="row-odd">
-            <td class="subject">Financial Management and Strategic Management</td>
-            <td class="marks">094</td>
-        </tr>
-        <tr class="row-even">
-            <td class="total">Total</td>
-            <td class="total">259</td>
-        </tr>
-         <tr class="row-even">
-           <td class="result-status">Result</td>
-            <td class="result-status">SUCCESSFUL</td>
-        </tr>
-        <tr class="row-odd">
-            <td class="total">Grand Total</td>
-            <td class="total">484</td>
-        </tr>
-    </table>
-
-    <div class="notes">
-        <p>'E' Indicates Marks obtained in an earlier attempt</p>
-        <p>'&lt;' Indicates passed under CA Regulations, 1988.</p>
-        <p>'50E' Indicates permanent exemption in paper(s) with the condition of minimum 50% marks in each of the remaining paper(s).</p>
-    </div>
-
-    <div class="navigation">
-        <p><a href="#">Check Another Roll Number</a> | <a href="#">Check Merit Login</a> | <a href="#">Home</a></p>
-    </div>
-</div>
-
-<div class="footer">
-    <p>Hosted by National Informatics Centre</p>
-    <p>Disclaimer: The result given is correct at the time of release of the result by the Institute which accepts no responsibility thereafter for errors or omissions caused as a result of their transmission via the Internet or their downloading or printing by the user. No material from this web site can be copied, reproduced, published, uploaded, posted, transmitted or distributed or dealt with in any manner, unless expressly authorized. Users are not permitted to change, modify or prepare derivative works from the content of this site. For any clarifications / confirmation please address your enquiries to Director (Examinations), The Institute of Chartered Accountants of India, 'ICAI BHAWAN', Post Box No. 7112, Indraprastha Marg, New Delhi - 110 002</p>
-</div>
-
 </body>
 </html>
