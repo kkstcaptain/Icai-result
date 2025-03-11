@@ -103,7 +103,7 @@ body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: 
 </head>
 <body>
 
-<div class="header"> {/* Corrected Comment Placement - Moved Header INSIDE resultPage Div */}
+<div class="header">
     <img src="placeholder-logo.png" alt="Your Logo">
     <h1>ICAI Exam Results</h1>
     <p>Examination Results</p>
@@ -149,7 +149,8 @@ body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: 
 
 
 <div class="container" id="resultPage" style="display:none;">
-    <div class="header">  <img src="placeholder-logo.png" alt="Your Logo">
+    <div class="header"> {/* Added header inside result page to apply specific header color */}
+        <img src="placeholder-logo.png" alt="Your Logo">
         <h1>ICAI Exam Results</h1>
         <p>Examination Results</p>
     </div>
@@ -224,5 +225,34 @@ function showDetailsPage(examType) {
 
 function showHomepage() {
     document.getElementById('detailsPage').style.display = 'none';
-    document.getElementById('resultPage').style.display = 'none
-        
+    document.getElementById('resultPage').style.display = 'none';
+    document.getElementById('homepage').style.display = 'block';
+}
+
+function checkDetails() {
+    var rollNo = document.getElementById('rollNo').value;
+    var regNo = document.getElementById('regNo').value;
+    var captchaInput = document.getElementById('captchaInput').value.toLowerCase();
+    var captchaExpected = "c4b73w";
+
+    if (rollNo === "392856" && regNo === "CRO0797366" && captchaInput === captchaExpected) {
+        document.getElementById('detailsPage').style.display = 'none';
+        document.getElementById('resultPage').style.display = 'block';
+        document.getElementById('detailError').innerText = "";
+    } else {
+        document.getElementById('resultPage').style.display = 'none';
+        document.getElementById('detailError').innerText = "Invalid Roll No., Registration No., or Captcha.";
+    }
+}
+
+function clearDetails() {
+    document.getElementById('rollNo').value = "";
+    document.getElementById('regNo').value = "";
+    document.getElementById('captchaInput').value = "";
+    document.getElementById('detailError').innerText = "";
+}
+
+</script>
+
+</body>
+</html>
